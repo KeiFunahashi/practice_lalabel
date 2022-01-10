@@ -34,4 +34,25 @@ class ToDoController extends Controller
 
         return redirect('/');
     }
+
+    // タスク編集画面を表示
+    public function editPage($id)
+    {
+        $todo = Todo::find($id);
+        return view('todo_edit', [
+            "todo" => $todo
+        ]);
+    }
+
+    // タスクを更新
+    public function edit(Request $request)
+    {
+        Todo::find($request->id)->update([
+            'task_name' => $request->task_name,
+            'task_description' => $request->task_description,
+            'assign_person_name' => $request->assign_person_name,
+            'estimate_hour' => $request->estimate_hour
+        ]);
+        return redirect('/');
+    }
 }

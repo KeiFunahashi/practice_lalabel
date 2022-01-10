@@ -23,7 +23,7 @@
                 <td>{{$todo->task_description}}</td>
                 <td>{{$todo->assign_person_name}}</td>
                 <td>{{$todo->estimate_hour}}</td>
-                <td><a href="/edit-page/#">編集</a></td>
+                <td><a href="/edit-page/{{$todo->id}}">編集</a></td>
                 <td><a href="/delete-page/#">削除</a></td>
             </tr>
             @endforeach
