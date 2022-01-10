@@ -7,3 +7,5 @@ Route::get('/create-page', 'App\Http\Controllers\ToDoController@createPage');
 Route::post('/create', 'App\Http\Controllers\ToDoController@create');
 Route::get('/edit-page/{id}', 'App\Http\Controllers\ToDoController@editPage');
 Route::post('/edit', 'App\Http\Controllers\ToDoController@edit');
+Route::get('/delete-page/{id}', 'App\Http\Controllers\ToDoController@deletePage');
+Route::post('/delete/{id}', 'App\Http\Controllers\ToDoController@delete');
